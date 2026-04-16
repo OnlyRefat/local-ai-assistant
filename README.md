@@ -24,6 +24,7 @@ A Retrieval-Augmented Generation (RAG) app using Spring AI, Ollama, and PgVector
    DB_PASSWORD=your_db_password
    ```
 4. Run: `./mvnw spring-boot:run`
+5. Run Tests: `./mvnw test`
 
 ## Usage
 POST `/api/chat` with a question about Spring Boot.
