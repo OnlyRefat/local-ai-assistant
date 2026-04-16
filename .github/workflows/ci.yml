@@ -29,6 +29,9 @@ jobs:
           SPRING_DATASOURCE_URL: jdbc:h2:mem:testdb
           SPRING_DATASOURCE_DRIVER_CLASS_NAME: org.h2.Driver
           SPRING_DOCKER_COMPOSE_ENABLED: false
+      - name: Print surefire reports on failure
+        if: failure()
+        run: cat target/surefire-reports/*.txt
 
       - name: Upload test reports on failure
         if: failure()
